@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Scholarship Portal 2.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i> 
+            <span>EduScholar Global</span>
+        </div>
+        <nav>
+            <button class="nav-btn active" onclick="navigate('page-home')">Home</button>
+            <button class="nav-btn" onclick="navigate('page-info')">Scholarships</button>
+            <button class="nav-btn" onclick="navigate('page-apply')">Eligibility Scanner</button>
+            <button class="nav-btn" onclick="navigate('page-rules')">Guidelines</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- PAGE 1: HOME -->
+        <section id="page-home" class="view-section active">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>Let's Start Your <span>Success Journey</span></h1>
+                    <p>Financial barriers should never stop a brilliant mind. We provide comprehensive grants for Medical, Engineering, Management, and Science students across all years of study.</p>
+                    <button class="primary-btn" onclick="navigate('page-apply')">Let's Get Started <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-stat box-1">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <h4>MBBS Grants</h4>
+                        <p>Special funding available</p>
+                    </div>
+                    <div class="floating-stat box-2">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h4>Tech Innovators</h4>
+                        <p>For B.Tech & MCA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: SCHOLARSHIP INFORMATION -->
+        <section id="page-info" class="view-section">
+            <div class="section-header">
+                <h2>Explore Available Scholarships</h2>
+                <p>Discover our diverse range of financial aid programs tailored for different academic streams and financial backgrounds.</p>
+            </div>
+            
+            <div class="grid-cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3>Medical Pioneers Fund</h3>
+                    <p class="grant-amount">₹2,00,000 / Year</p>
+                    <p>Exclusive for MBBS students maintaining top academic records.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Tech Excellence Award</h3>
+                    <p class="grant-amount">₹1,00,000 / Year</p>
+                    <p>For B.Tech, M.Tech, BCA, and MCA students with exceptional coding and academic skills.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Business Leaders Grant</h3>
+                    <p class="grant-amount">₹75,000 / Year</p>
+                    <p>Designed for BBA and MBA students showing great entrepreneurial potential.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Pure Sciences Fellowship</h3>
+                    <p class="grant-amount">₹60,000 / Year</p>
+                    <p>Research funding for B.Sc and M.Sc students.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
+                    <h3>EWS Support Scheme</h3>
+                    <p class="grant-amount">100% Fee Waiver</p>
+                    <p>Complete support for brilliant students with low family income.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-medal"></i></div>
+                    <h3>President's Gold Medal</h3>
+                    <p class="grant-amount">₹1,50,000 / Year</p>
+                    <p>For absolute toppers (90%+ in 10th & 12th, 9.0+ CGPA).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: ELIGIBILITY SCANNER (FORM) -->
+        <section id="page-apply" class="view-section">
+            <div class="split-layout">
+                <div class="form-container">
+                    <h2>Eligibility Scanner</h2>
+                    <p>Enter your complete academic history to evaluate your scholarship tier.</p>
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Course Name</label>
+                            <select id="courseName">
+                                <option value="" disabled selected>Select Course...</option>
+                                <option value="mbbs">MBBS</option>
+                                <option value="btech">B.Tech</option>
+                                <option value="mtech">M.Tech</option>
+                                <option value="mba">MBA</option>
+                                <option value="bba">BBA</option>
+                                <option value="bsc">B.Sc</option>
+                                <option value="msc">M.Sc</option>
+                                <option value="bca">BCA</option>
+                                <option value="mca">MCA</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Year of Study</label>
+                            <select id="studyYear">
+                                <option value="" disabled selected>Select Year...</option>
+                                <option value="1">1st Year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                                <option value="4">4th Year</option>
+                                <option value="5">5th Year (MBBS/Int)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>10th Percentage (%)</label>
+                            <input type="number" id="tenthMarks" placeholder="e.g. 92" max="100">
+                        </div>
+                        <div class="input-group">
+                            <label>12th Percentage (%)</label>
+                            <input type="number" id="twelfthMarks" placeholder="e.g. 88" max="100">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Current CGPA (Out of 10)</label>
+                            <input type="number" id="cgpa" placeholder="e.g. 8.5" step="0.1" max="10">
+                        </div>
+                        <div class="input-group">
+                            <label>Family Income (Yearly ₹)</label>
+                            <input type="number" id="familyIncome" placeholder="e.g. 250000">
+                        </div>
+                    </div>
+
+                    <button class="primary-btn full-width" onclick="scanProfile()">Analyze My Profile <i class="fa-solid fa-microchip"></i></button>
+                </div>
+
+                <div class="result-container">
+                    <div id="status-box" class="status-box empty">
+                        <i class="fa-solid fa-file-shield"></i>
+                        <h3>System Ready</h3>
+                        <p>Fill out the form completely and submit to generate your scholarship report.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: RULES -->
+        <section id="page-rules" class="view-section">
+            <div class="section-header">
+                <h2>Terms, Regulations & Compliance</h2>
+                <p>Strict guidelines apply to all scholarship categories. Read carefully before applying.</p>
+            </div>
+
+            <div class="rules-container">
+                <div class="rule-box">
+                    <div class="rule-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <div class="rule-text">
+                        <h3>1. Academic Excellence & Backlogs</h3>
+                        <p>To retain the scholarship in 2nd, 3rd, or 4th year, the student must clear all subjects in the first attempt. A single backlog or 're-appear' status will permanently terminate the grant.</p>
+                    </div>
+                </div>
+                
+                <div class="rule-box">
+                    <div class="rule-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="rule-text">
+                        <h3>2. Attendance & Conduct</h3>
+                        <p>Minimum 85% attendance is strictly enforced across all departments (Engineering, Medical, Science, Management). Any involvement in disciplinary cases leads to immediate suspension of funds.</p>
+                    </div>
+                </div>
+
+                <div class="rule-box">
+                    <div class="rule-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <div class="rule-text">
+                        <h3>3. Financial Verification</h3>
+                        <p>Income certificates must be issued by a Tehsildar or higher authority. Random audits are conducted, and forged documents will result in legal action and university rustication.</p>
+                    </div>
+                </div>
+
+                <div class="rule-box">
+                    <div class="rule-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="rule-text">
+                        <h3>4. Course Specific Mandates</h3>
+                        <p>MBBS students must complete their mandatory clinical postings. M.Tech and M.Sc students must publish at least one research paper per academic year to qualify for renewal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
